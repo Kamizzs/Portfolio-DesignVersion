@@ -4,10 +4,7 @@
 }
 
 .section1{
-    background-color: #222A27;
-    width: 95%;
-    height: 95%;
-    margin: auto;   
+    background-color: #222A27;  
     display: flex;
     flex-wrap: wrap;
     border: solid 0.1em #3d4944;
@@ -15,47 +12,49 @@
 
 body{
     background-color: rgb(0, 0, 0); 
-    margin: auto;
-    margin-top: 1em;
 }
 
 header{
     justify-content: flex-start;
-    order: 1;
-    margin: 0;
-    width: 100%;
-    height: 6em;
+    width: 90%;
+    height: 5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #4ed0a995;
+    font-family: 'Font';
+    font-size: x-large;
     position: relative;
-    right: 2em;
     top: 2em;
+    z-index: 10000;
 }
 
+
 .medias{
-    justify-content: flex-start;
-    order: 4;
-    padding-top: 3em;
+    display: flex;
     position: relative;
-    top: 30em;
-    right: 60em;
+    bottom: 3em;
+}
+
+.medias img{
+    margin-left: 5em;
+
 }
 
 .cvPicture{
     justify-content: flex-start;
     margin-left: 2em;
-    order: 2;
+    position: relative;
+    bottom: 3em;
 }
 
 .bio{
-    justify-content: flex-end;
     background-color: #4ed0a995;
     width: 32em;
-    height: 10em;
+    height: 13em;
     margin: auto;
-    order: 5;
-    position: relative;
-    top: -6em;
-    left: 30em;
+    margin-top: 20em;
+    margin-right: 0;
 }
 
 .bio p{
@@ -66,36 +65,92 @@ header{
 }
 
 .title{
-    order: 3;
-    position: relative;
-    top: 13em;
-    margin: 2em;
+    font-family: 'Font';
+    font-size: 3em;
+    color: white;
+    margin: 0;
+    margin-top: 3em;
+    margin-left: 1em;
 }
 
-@media only screen and (max-width: 1000px) {
 
-    .section1{
-        width: 100%;
-        height: 100%;
-        margin: 0;   
-    }
-    
-    header{
-    }
-    
-    .medias{
-    }
-    
-    .cvPicture{
-    }
-    
-    .bio{
-    }
-    
-    .bio p{
-    }
-    
-    .title{
-    }
+@font-face {
+    font-family: "Font";
+    src: url(../fonts/otf_glusp/OTF®\ Glusp.ttf) format("truetype");
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ffffff;
+  --color-secondary: #43c09b;
+  --color-tertiary: #2f9d7c;
+  --color-quaternary: #15684f;
+  --color-quinary: #104c3a;
+}
+
+.text-shadows {
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+      9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    color: var(--color-primary);
+    animation: shadows 3s ease-in infinite;
+  }
+  
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      transform: translate(-3px, -3px);
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    20% {
+      transform: translate(-6px, -6px);
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    30% {
+      transform: translate(-9px, -9px);
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    60% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+        12px 12px 0 var(--color-quinary);
+    }
+    70% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+    }
+    80% {
+      text-shadow: 3px 3px 0 var(--color-secondary),
+        6px 6px 0 var(--color-tertiary);
+    }
+    90% {
+      text-shadow: 3px 3px 0 var(--color-secondary);
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
 

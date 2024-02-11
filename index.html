@@ -7,11 +7,23 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="text-anim.js"></script>
     <title>Portfolio</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Récupérer l'élément du titre par son identifiant
+            var monTitre = document.getElementById("liens");
+
+            // Vérifier si l'URL se termine par "page.html"
+            if (window.location.href.endsWith("#") || window.location.href.endsWith("index.html")) {
+                // Changer la couleur du titre
+                monTitre.style.color = "#274330"; // Remplacez "red" par la couleur souhaitée
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="section1">
         <header>
-            <a href="#">Aboutme</a>
+            <a id="liens" href="#">Aboutme</a>
             <a href="art.html">Art</a>
             <a href="videogames.html">Video Games</a>
             <a href="code.html">Code</a>

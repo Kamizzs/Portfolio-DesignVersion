@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/art.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="art.js" async></script>
+    <title>Portfolio</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Récupérer l'élément du titre par son identifiant
+            var monTitre = document.getElementById("artL");
+
+            // Vérifier si l'URL se termine par "page.html"
+            if (window.location.href.endsWith("art.html") || window.location.href.endsWith("#")) {
+                // Changer la couleur du titre
+                monTitre.style.color = "#6D1C74"; // Remplacez "red" par la couleur souhaitée
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="section1">
+        <header>
+            <a id="liens" href="index.html">Aboutme</a>
+            <a id="artL" href="art.html">Art</a>
+            <a href="videogames.html">Video Games</a>
+            <a href="code.html">Code</a>
+        </header>
+
+    </div>
+    <div id="carrousel">
+        <div id="container">
+
+        </div>
+        <img src="img/goofy/sitt-removebg-preview.png" class="button" id="d"/>
+    </div>
+    <script>
+        document.body.onload=function(){
+            nbr = 7;
+            p=0;
+            container = document.getElementById("container");
+            d = document.getElementById("d");
+            container.style.width=(800*nbr)+"px";
+            for(i=1;i<=nbr;i++){
+                div = document.createElement("div");
+                div.className="photo";
+                div.style.backgroundImage="url('img/im"+i+".png')";
+                container.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>

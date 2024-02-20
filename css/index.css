@@ -1,13 +1,20 @@
 @font-face {
-    font-family: Cormorant_Infant;
-    src: url(fonts/Cormorant_Infant/Cormorant_Infant-Regular.ttf) format("ttf");
+  font-family: "dsk";
+  src: url(../fonts/otf_glusp/Disket-Mono-Regular.ttf) format("truetype");
 }
 
 .section1{
     background-color: #222A27;  
     display: flex;
     flex-wrap: wrap;
-    border: solid 0.1em #3d4944;
+}
+
+.goofy{
+  width: 250px;
+  height: 150px;
+  position: relative;
+  top: 1.5em;
+  left: 1em;
 }
 
 body{
@@ -19,7 +26,7 @@ header{
     width: 90%;
     height: 5em;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #4ed0a995;
     font-family: 'Font';
@@ -60,8 +67,8 @@ header{
 
 .bio p{
     margin: 1em;
-    font-size: large;
-    font-family: Cormorant_Infant serif;
+    font-size: 0.9em;
+    font-family: dsk;
     color: white;
 }
 
@@ -154,4 +161,34 @@ header{
       text-shadow: none;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+    }
+
+    header {
+        position: static;
+        width: 100%;
+        text-align: center;
+    }
+
+    .medias {
+        justify-content: center;
+    }
+
+    .medias img {
+        margin-left: 0.5em;
+    }
+
+    .cvPicture {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .bio {
+        width: 100%;
+        margin-top: 1em;
+    }
+}
 

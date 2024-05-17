@@ -1,65 +1,51 @@
 @font-face {
-    font-family: Cormorant_Infant;
-    src: url(fonts/Cormorant_Infant/Cormorant_Infant-Regular.ttf) format("ttf");
-}
-
-.section1{
-    background-color: #F255F5;  
+    font-family: "dsk";
+    src: url(../fonts/otf_glusp/Disket-Mono-Regular.ttf) format("truetype");
+  }
+  
+  
+  body {
+    background-color: #F255F5;
+    margin: 0;
+  }
+  
+  header {
+    justify-content: space-evenly;
+    text-align: center;
+    float: right;
+    margin-right: 1em;
+    height: 100vh;
+    width: 20vw;
     display: flex;
-    flex-wrap: wrap;
-}
-
-header{
-    justify-content: flex-start;
-    width: 90%;
-    height: 5em;
-    display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     background-color: #ffffff95;
     font-family: 'Font';
-    font-size: x-large;
+    font-size: 2vw;
     z-index: 10000;
     color: white;
-}
+  }
 
-.title{
-    font-family: 'Font';
-    font-size: 3em;
-    color: white;
-    margin: 0;
-    margin-top: 3em;
-    margin-left: 1em;
-}
+  .lineh {
+    width:100%;
+    height:20em;
+    border-bottom: 2px solid white;
+    z-index: -10;
+  }
 
-
-@font-face {
+  .linev {
+    border-left: 2px solid white;
+    height: 100%;
+    position: absolute;
+    left: 30%;
+    margin-left: -3px;
+    top: 0;
+  }
+  
+  @font-face {
     font-family: "Font";
     src: url(../fonts/otf_glusp/OTF®\ Glusp.ttf) format("truetype");
-}
-
-#carrousel{
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-#container{
-    display: flex;
-    justify-content: center;
-}
-
-.button{
-    position: absolute;
-    width: 100px;
-    cursor: pointer;
-}
-
-#d{
-    transition: all 0.3 ease;
-}
-
-#d:hover{
-    transform: scale(1.1);
-    transition: all 0.3 ease;
-}
+  }
+  
+  @media screen and (max-width: 1024px) {
+  }

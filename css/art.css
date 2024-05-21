@@ -1,15 +1,15 @@
 @font-face {
     font-family: "dsk";
     src: url(../fonts/otf_glusp/Disket-Mono-Regular.ttf) format("truetype");
-  }
-  
-  
-  body {
+}
+
+
+body {
     background-color: #F255F5;
     margin: 0;
-  }
-  
-  header {
+}
+
+header {
     justify-content: space-evenly;
     text-align: center;
     float: right;
@@ -24,28 +24,84 @@
     font-size: 2vw;
     z-index: 10000;
     color: white;
-  }
+}
 
-  .lineh {
-    width:100%;
-    height:20em;
+.lineh {
+    width: 100%;
+    height: 20em;
     border-bottom: 2px solid white;
     z-index: -10;
-  }
+}
 
-  .linev {
+.linev {
     border-left: 2px solid white;
     height: 100%;
     position: absolute;
     left: 30%;
     margin-left: -3px;
     top: 0;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: "Font";
     src: url(../fonts/otf_glusp/OTF®\ Glusp.ttf) format("truetype");
-  }
-  
-  @media screen and (max-width: 1024px) {
-  }
+}
+
+.carousel {
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+    display: none; /* hide all slide images not currently being viewed */
+}
+
+.carousel .carousel-item-visible {
+    display: block; /* show current slide image */
+    animation: fadeVisibility 0.5s; /* for fading effect when switching between slides */
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Navigation control styles */
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* put space between the navigation buttons */
+    position: absolute; /* position navigation buttons on top */
+    top: 50%; /* center navigation buttons on the slide */
+    transform: translateY(-50%); /* align navigation buttons */
+}
+
+.carousel .carousel-actions button {
+    border: 0;
+    cursor: pointer;
+    width: 10em;
+    height: 40px;
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+    margin-left: 20px; /* prevent previous button from touching the side*/
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+    margin-right: 20px;  /* prevent next button from touching the side*/
+}
+
+/* hanlde smooth transitions between slides */
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {}
